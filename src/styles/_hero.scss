@@ -1,0 +1,24 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+
+.hero {
+  border-bottom: 2px solid $color-main;
+  height: 400px;
+  .hero-heading {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .projects-link:hover a {
+    text-decoration: none;
+    color: #fff;
+    background-color: $color-main;
+    &.pointer {
+      color: $color-main;
+      background-color: #fff;
+      transform: translateY(10px);
+    }
+  }
+  .pointer {
+    font-size: 40px;
+  }
+}

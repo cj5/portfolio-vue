@@ -1,0 +1,16 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+header {
+  height: 90px;
+  border-bottom: 2px solid $color-main;
+  h1 {
+    font-size: 20px;
+  }
+  li {
+    margin-left: 20px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
