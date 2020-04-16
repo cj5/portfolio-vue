@@ -1,14 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Space+Mono');
-
-body, a {
-  font-family: 'Space Mono', Arial, Helvetica, sans-serif;
-  color: $color-main;
-}
-h1, h2, h3, h4, h5, p {
+body {
   margin: 0;
 }
+body,
 a {
-  transition: all 0.2s ease-in-out;
+  font-family: $font-main;
+  color: $color-main;
+  font-weight: 400;
+}
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+p {
+  margin: 0;
+  font-weight: 400;
 }
 ul {
   list-style: none;
@@ -19,9 +25,50 @@ a {
   padding: 5px 10px 7px;
   line-height: 16px;
   display: inline-block;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
   &:hover {
     text-decoration: none;
     color: #fff;
     background-color: $color-main;
   }
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @media #{$mnw-sm} {
+    max-width: $vpw-sm;
+  }
+  @media #{$mnw-md} {
+    max-width: $vpw-md;
+  }
+  @media #{$mnw-lg} {
+    max-width: $vpw-lg;
+  }
+  @media #{$mnw-xl} {
+    max-width: $vpw-xl;
+  }
+}
+
+.flex {
+  display: flex;
+}
+.fdc {
+  flex-direction: column;
+}
+.aic {
+  align-items: center;
+}
+.jcc {
+  justify-content: center;
+}
+.jcb {
+  justify-content: space-between;
+}
+
+.w-100 {
+  width: 100%;
 }

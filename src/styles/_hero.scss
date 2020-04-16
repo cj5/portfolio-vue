@@ -1,24 +1,46 @@
-@import '_variables.scss';
-@import '_mixins.scss';
-
 .hero {
+  position: relative;
   border-bottom: 2px solid $color-main;
-  height: 400px;
-  .hero-heading {
-    font-size: 40px;
-    line-height: 40px;
-  }
   .projects-link:hover a {
     text-decoration: none;
     color: #fff;
     background-color: $color-main;
     &.pointer {
       color: $color-main;
-      background-color: #fff;
+      background-color: transparent;
       transform: translateY(10px);
     }
   }
   .pointer {
     font-size: 40px;
+    margin-top: 20px;
+  }
+}
+.hero-heading {
+  font-size: 40px;
+  line-height: 40px;
+}
+.hero-wrapper {
+  position: relative;
+  z-index: 9;
+  ul {
+    margin: 30px 0 20px;
+  }
+}
+
+.cell-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.cell-row {
+  opacity: 0;
+  transition: 0.2s all ease-in-out;
+  &.show {
+    opacity: 1;
+  }
+  .true {
+    background-color: rgba($color-main, 0.05);
   }
 }
