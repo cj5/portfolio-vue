@@ -2,15 +2,26 @@
   <div class="hero flex jcc aic" :style="`height: ${heroHt}px;`">
     <div class="hero-wrapper flex fdc aic">
       <h2 class="hero-heading">Web Developer</h2>
-      <ul class="flex">
-        <li><a href="">M</a></li>
-        <li><a href="">L</a></li>
-        <li><a href="">G</a></li>
+      <ul class="social flex">
+        <li>
+          <a href="mailto:chris@chrisstack.co">
+            <svg class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/chris-stack-5ba22851" target="_blank">
+            <svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/cj5" target="_blank">
+            <svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg>
+          </a>
+        </li>
       </ul>
-      <div class="projects-link flex fdc aic">
-        <a href="">Check out my projects</a>
-        <a href="" class="pointer">☟</a>
-      </div>
+      <a href="#" class="projects-link">
+        <p><span class="projects">Check out my projects</span><br><span class="pointer">☟</span></p>
+      </a>
     </div>
     <CellularAutomata :heroHt="heroHt" />
   </div>
@@ -27,7 +38,7 @@ export default {
     }
   },
   components: {
-    CellularAutomata
+    CellularAutomata,
   }
 }
 </script>

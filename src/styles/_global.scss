@@ -26,6 +26,7 @@ a {
   line-height: 16px;
   display: inline-block;
   text-decoration: none;
+  cursor: pointer;
   transition: all 0.2s ease-in-out;
   &:hover {
     text-decoration: none;
@@ -71,4 +72,8 @@ a {
 
 .w-100 {
   width: 100%;
+}
+
+.hide {
+  display: none;
 }
