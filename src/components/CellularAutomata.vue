@@ -177,7 +177,6 @@ export default {
   mounted() {
     this.randomizeFirstRow()
     this.automatize(this.rule150)
-    console.log(this.$refs.ruleSelectors)
     this.$refs.ruleSelectors.childNodes[3].classList.add('active')
     this.showRows()
   }

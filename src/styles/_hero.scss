@@ -2,9 +2,6 @@
   position: relative;
   border-bottom: 2px solid $color-main;
   .projects-link {
-    text-align: center;
-    // display: flex;
-    // flex-direction: column;
     .projects {
       display: inline-block;
       width: auto;
@@ -60,10 +57,29 @@
   }
 }
 
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+}
 .icon {
+  position: relative;
   fill: $color-main;
-  width: 25px;
-  height: 25px;
+  &.icon-mail {
+    width: 25px;
+    height: 25px;
+  }
+  &.icon-linkedin {
+    width: 26px;
+    height: 26px;
+    bottom: 2px;
+  }
+  &.icon-github {
+    width: 24px;
+    height: 24px;
+  }
 }
 .social {
   margin: 20px 0 16px;
