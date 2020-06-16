@@ -15,26 +15,31 @@
     </div>
     <!-- <div class="container"> -->
       <div class="automata-selector">
-        <a href="https://mathworld.wolfram.com/ElementaryCellularAutomaton.html" target="_blank">Cellular Automaton ></a>
+        <a href="https://mathworld.wolfram.com/ElementaryCellularAutomaton.html" class="link-1" target="_blank">Cellular Automaton ></a>
         <div ref="ruleSelectors">
           <a 
             role="button" 
+            class="link-1"
             @click="switchRule(rule73, $event)"
           >Rule 73</a>
           <a 
             role="button" 
+            class="link-1"
             @click="switchRule(rule89, $event)"
           >Rule 89</a>
           <a 
             role="button" 
+            class="link-1"
             @click="switchRule(rule126, $event)"
           >Rule 126</a>
           <a 
             role="button" 
+            class="link-1"
             @click="switchRule(rule150, $event)"
           >Rule 150</a>
           <a 
             role="button" 
+            class="link-1"
             @click="switchRule(rule183, $event)"
           >Rule 183</a>
         </div>

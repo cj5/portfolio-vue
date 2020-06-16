@@ -4,13 +4,15 @@
     <Header />
     <Hero />
     <Projects />
+    <Resume />
   </div>
 </template>
 
 <script>
-import Header from './components/Header'
-import Hero from './components/Hero'
-import Projects from './components/Projects'
+import Header from './components/sections/Header'
+import Hero from './components/sections/Hero'
+import Projects from './components/sections/Projects'
+import Resume from './components/sections/Resume'
 import SvgIcons from './components/SvgIcons'
 
 export default {
@@ -19,7 +21,8 @@ export default {
     Header,
     Hero,
     Projects,
-    SvgIcons
+    Resume,
+    SvgIcons,
   }
 }
 </script>
