@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import { nlToArr } from '../helpers'
+import { nlToArr } from '../../../helpers'
 
 export default {
   name: 'CellularAutomata',

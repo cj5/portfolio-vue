@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import HeaderContent from '../HeaderContent'
+import HeaderContent from './HeaderContent'
 
 export default {
   name: 'Header',

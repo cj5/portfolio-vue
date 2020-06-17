@@ -53,7 +53,7 @@ export default {
       projectEl.style.height = Math.round(width / 1.7) + 'px'
     },
     img(fileName) {
-      return require(`../images/${fileName}`)
+      return require(`../../../images/${fileName}`)
     }
   },
   mounted() {
