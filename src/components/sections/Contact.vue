@@ -1,6 +1,6 @@
 <template>
-  <Section title="Résumé" id="resume">
-    <p>Hey</p>
+  <Section title="Contact" id="contact">
+    <p>Contact section</p>
   </Section>
 </template>
 
@@ -8,7 +8,7 @@
 import Section from '../Section'
 
 export default {
-  name: 'Resume',
+  name: 'Contact',
   components: {
     Section
   }

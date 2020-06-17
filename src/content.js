@@ -7,6 +7,7 @@ const projects = [
     imgWidth: '300px',
     imgFileBg: 'bespoke-bg.jpg',
     filterColor: 'rgba(28,27,28,0.75)',
+    href: 'https://bespokedesignstudio.com',
     techList: [
       'Vue',
       'Gridsome',
@@ -16,6 +17,7 @@ const projects = [
       'Responsive',
       'Accessible',
     ],
+    description: 'Description of project. Description of project. Description of project. Description of project.'
   },
   {
     title: 'Signature Window Cleaning',
@@ -25,6 +27,7 @@ const projects = [
     imgWidth: '340px',
     imgFileBg: 'signature-bg.jpg',
     filterColor: 'rgba(255,255,255,0.75)',
+    href: 'http://signaturewindowcleaning.net',
     techList: [
       'HTML',
       'SCSS',
@@ -32,7 +35,8 @@ const projects = [
       'WordPress',
       'Responsive',
       'Accessible'
-    ]
+    ],
+    description: 'Description of project. Description of project. Description of project. Description of project.'
   },
   {
     title: 'Proximity',
@@ -42,12 +46,14 @@ const projects = [
     imgWidth: '350px',
     imgFileBg: 'proximity-bg.png',
     filterColor: 'rgba(255,255,255,0.93)',
+    href: 'http://proximity.chrisstack.co',
     techList: [
       'Vue',
       'Vuex',
       'JavaScript (ES6+)',
       'SCSS'
     ],
+    description: 'Description of project. Description of project. Description of project. Description of project.'
   },
   {
     title: 'Mastermind',
@@ -55,12 +61,12 @@ const projects = [
     bgColor: '#333',
     imgFile: 'mastermind.png',
     imgWidth: '250px',
-    // imgFileBg: 'mastermind-bg.png',
-    // filterColor: 'rgba(51,51,51,0.9)',
+    href: 'http://chrisstack.co/mastermind',
     techList: [
       'JavaScript (ES6)',
       'HTML / SCSS'
     ],
+    description: 'Description of project. Description of project. Description of project. Description of project.'
   },
 ];
 

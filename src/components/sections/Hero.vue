@@ -19,7 +19,7 @@
           </a>
         </li>
       </ul>
-      <a href="#" class="projects-link flex fdc aic">
+      <a href="#" class="projects-link goto-projects">
         <p class="projects">Check out my projects</p>
         <p class="pointer">☟</p>
       </a>
@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import CellularAutomata from '../CellularAutomata.vue';
+import CellularAutomata from '../CellularAutomata.vue'
 
 export default {
   name: 'Hero',
@@ -40,6 +40,6 @@ export default {
   },
   components: {
     CellularAutomata,
-  }
+  },
 }
 </script>
