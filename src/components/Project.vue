@@ -1,8 +1,10 @@
 <template>
   <a 
+    :href="data.href"
     class="project-wrap" 
     ref="projectWrap"
     :style="`background-color: ${data.bgColor};`"
+    target="_blank"
   >
     <div class="project">
       <img 
@@ -22,10 +24,17 @@
     <div class="project-overlay">
       <div class="content">
         <h3 class="heading">{{ data.title }}</h3>
-        <h4 class="subheading">{{ data.subtitle }}</h4>
+        <h4 class="subheading italic">{{ data.subtitle }}</h4>
         <ul class="tech-list">
           <li v-for="(tech, key) in data.techList" :key="key">{{ tech }}</li>
         </ul>
+      </div>
+      <div class="goto-project" v-if="data.href">
+        <svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>
+        <p>Go to project</p>
+      </div>
+      <div class="project-info" v-if="data.description">
+        <p>{{ data.description }}</p>
       </div>
     </div>
   </a>

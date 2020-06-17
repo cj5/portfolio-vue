@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Section title="Projects">
+    <Section title="Projects" id="projects" ref="projects">
       <div class="projects-wrap">
         <Project
           v-for="(i, key) in projects.length"
