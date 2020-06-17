@@ -1,6 +1,9 @@
-@import '_variables.scss';
-@import '_mixins.scss';
+@import 'variables';
+@import 'mixins';
 
-@import '_global.scss';
-@import '_header.scss';
-@import '_page.scss';
+@import 'global';
+@import 'header-footer';
+@import 'hero';
+@import 'projects';
+@import 'resume';
+@import 'contact';

@@ -1,0 +1,19 @@
+.contact-section {
+  display: flex;
+  justify-content: center;
+  .social {
+    width: auto;
+    margin: 0;
+    li {
+      margin: 0 20px;
+    }
+    .social-icon,
+    .icon {
+      width: 40px;
+      height: 40px;
+    }
+    .social-icon {
+      padding: 8px;
+    }
+  }
+}

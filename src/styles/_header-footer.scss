@@ -63,7 +63,30 @@ header {
       height: 20px;
       fill: #fff;
       margin: 1px 0 0 10px;
-      @include transition;
     } 
+  }
+}
+
+.footer {
+  background-color: $color-main;
+  margin-top: 80px;
+  padding: 20px 0;
+  color: #fff;
+  p {
+    font-size: 14px;
+  }
+  .copy {
+    position: relative;
+    top: 2px;
+    font-size: 24px;
+    vertical-align: middle;
+  }
+  .goto-top {
+    position: relative;
+    left: $link-px;
+    .icon {
+      width: 25px;
+      height: 25px;
+    }
   }
 }
