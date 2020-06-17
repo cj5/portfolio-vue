@@ -1,11 +1,15 @@
 .hero {
   position: relative;
+  border-top: 2px solid $color-main;
   border-bottom: 2px solid $color-main;
   .projects-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .projects {
       display: inline-block;
       width: auto;
-      padding: 5px 10px 7px;
+      padding: 1px $link-px 3px;
       margin-bottom: 10px;
       transition: 0.2s all ease-in-out;
     }
@@ -133,12 +137,26 @@
   color: #fff;
   overflow: hidden;
   .heading {
-    font-size: 24px;
+    font-size: 20px;
     text-transform: uppercase;
   }
-  &:hover .project-overlay {
-    left: 0;
-    transform: scale(1) rotate(0deg);
+  .subheading {
+    font-size: 14px;
+  }
+  &:hover {
+    .project-overlay {
+      left: 0;
+      transform: scale(1) rotate(0deg);
+      // opacity: 1
+    }
+    .goto-project {
+      transform: translateX(0);
+      @include transition-delay($project-trans-dur);
+    }
+    .project-info {
+      opacity: 1;
+      @include transition-delay($project-trans-dur + 0.15);
+    }
   }
 }
 .project {
@@ -172,24 +190,49 @@
   position: absolute;
   top: 0;
   left: calc(-100% - 50px);
+  transform: scale(1) rotate(20deg);
+  // left: 0;
+  // opacity: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba($color-main, 0.8);
-  transform: scale(1) rotate(20deg);
+  background-color: rgba($color-main, 0.9);
   z-index: 99;
-  @include transition;
+  @include transition($project-trans-dur);
   .content {
-    padding: 20px;
+    padding: $project-p;
   }
 }
 .tech-list {
   display: flex;
   flex-wrap: wrap;
   margin-top: 15px;
-  padding-top: 30px;
+  padding-top: 20px;
   border-top: 1px solid #fff;
   li {
     flex: 0 0 50%;
-    font-size: 20px;
+    font-size: 18px;
   }
+}
+.goto-project {
+  position: absolute;
+  width: auto;
+  bottom: $project-p;
+  left: $project-p;
+  display: flex;
+  align-items: center;
+  transform: translateX(-300px);
+  .icon {
+    width: 30px;
+    height: 30px;
+    fill: #fff;
+    margin-right: 10px;
+  }
+}
+.project-info {
+  position: absolute;
+  width: 320px;
+  bottom: $project-p + 4px;
+  right: $project-p;
+  font-size: 12px;
+  opacity: 0;
 }

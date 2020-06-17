@@ -1,41 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700');
 
-$px: 0.0625rem;
-
-$page-mxw: 1920*$px;
-$header-ht: 100*$px;
-$short-header-ht: 70*$px;
+$page-mxw: 1920px;
+$header-ht: 90px;
+$sticky-header-ht: 50px;
+$link-px: 10px;
+$project-p: 20px;
+$project-trans-dur: 0.2s;
 
 // FONTS
 $font-main: 'Space Mono', Arial, Helvetica, sans-serif;
 
 // COLORS
 $color-main: #0f1bff;
-
-// FONT SIZING
-$fz-xxl: 42px;
-$fz-xl: 36px;
-$fz-lg: 32px;
-$fz-md: 28px;
-$fz-sm: 24px;
-$fz-xs: 20px;
-$fz-xxs: 16px;
-
-$fz:
-  'xxl' $fz-xxl,
-  'xl' $fz-xl,
-  'lg' $fz-lg,
-  'md' $fz-md,
-  'sm' $fz-sm,
-  'xs' $fz-xs,
-  'xxs' $fz-xxs
-;
-@each $i in $fz {
-  .fz-#{nth($i, 1)} {
-    font-size: nth($i, 2) !important;
-    line-height: nth($i, 2) + 8px !important;
-  }
-}
 
 // BREAKPOINTS
 $vpw-xl: 1200px;

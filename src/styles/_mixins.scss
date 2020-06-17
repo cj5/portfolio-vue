@@ -1,3 +1,10 @@
 @mixin transition($speed: 0.2s) {
   transition: $speed all ease-in-out;
 }
+
+@mixin transition-delay($delay) {
+  transition-delay: $delay;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
