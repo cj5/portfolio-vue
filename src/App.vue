@@ -6,15 +6,17 @@
     <Projects />
     <Resume />
     <Contact />
+    <Footer />
   </div>
 </template>
 
 <script>
-import Header from './components/sections/Header'
-import Hero from './components/sections/Hero'
-import Projects from './components/sections/Projects'
-import Resume from './components/sections/Resume'
+import Header from './components/sections/header/Header'
+import Hero from './components/sections/hero/Hero'
+import Projects from './components/sections/projects/Projects'
+import Resume from './components/sections/resume/Resume'
 import Contact from './components/sections/Contact'
+import Footer from './components/sections/Footer'
 import SvgIcons from './components/SvgIcons'
 import { nlToArr, addSmoothScroll, setTabIndex } from './helpers'
 
@@ -26,6 +28,7 @@ export default {
     Projects,
     Resume,
     Contact,
+    Footer,
     SvgIcons,
   },
   mounted() {
