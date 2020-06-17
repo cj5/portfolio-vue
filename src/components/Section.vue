@@ -1,7 +1,9 @@
 <template>
-  <section class="container section">
-    <h2 class="heading-section" :id="id">{{ title }}</h2>
-    <slot />
+  <section class="section">
+    <div class="container">
+      <h2 class="heading-section" :id="id">{{ heading }}</h2>
+      <slot />
+    </div>
   </section>
 </template>
 
@@ -9,7 +11,7 @@
 export default {
   name: 'Section',
   props: {
-    title: String,
+    heading: String,
     id: String
   }
 }
