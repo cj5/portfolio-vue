@@ -1,50 +1,50 @@
 <template>
-  <div class="automata-wrap">
-    <div 
-      v-for="(i, key1) in rows"
-      :key="key1"
-      class="cell-row flex" 
-      ref="cellRow"
-    >
-      <div
-        v-for="(j, key2) in cellsPerRow" 
-        :key="key2"
-        :style="`width: ${cellSize}px; height: ${cellSize}px;`"
-        ref="cell"
-      ></div>
-    </div>
-    <!-- <div class="container"> -->
-      <div class="automata-selector">
-        <a href="https://mathworld.wolfram.com/ElementaryCellularAutomaton.html" class="link-1" target="_blank">Cellular Automaton ></a>
-        <div ref="ruleSelectors">
-          <a 
-            role="button" 
-            class="link-1"
-            @click="switchRule(rule73, $event)"
-          >Rule 73</a>
-          <a 
-            role="button" 
-            class="link-1"
-            @click="switchRule(rule89, $event)"
-          >Rule 89</a>
-          <a 
-            role="button" 
-            class="link-1"
-            @click="switchRule(rule126, $event)"
-          >Rule 126</a>
-          <a 
-            role="button" 
-            class="link-1"
-            @click="switchRule(rule150, $event)"
-          >Rule 150</a>
-          <a 
-            role="button" 
-            class="link-1"
-            @click="switchRule(rule183, $event)"
-          >Rule 183</a>
-        </div>
+  <div class="cellular-automata">
+    <div class="automata-wrap">
+      <div 
+        v-for="(i, key1) in rows"
+        :key="key1"
+        class="cell-row flex" 
+        ref="cellRow"
+      >
+        <div
+          v-for="(j, key2) in cellsPerRow" 
+          :key="key2"
+          :style="`width: ${cellSize}px; height: ${cellSize}px;`"
+          ref="cell"
+        ></div>
       </div>
-    <!-- </div> -->
+    </div>
+    <div class="automata-selector">
+      <a href="https://mathworld.wolfram.com/ElementaryCellularAutomaton.html" class="link-1" target="_blank">Cellular Automaton ></a>
+      <div ref="ruleSelectors">
+        <a 
+          role="button" 
+          class="link-1"
+          @click="switchRule(rule73, $event)"
+        >Rule 73</a>
+        <a 
+          role="button" 
+          class="link-1"
+          @click="switchRule(rule89, $event)"
+        >Rule 89</a>
+        <a 
+          role="button" 
+          class="link-1"
+          @click="switchRule(rule126, $event)"
+        >Rule 126</a>
+        <a 
+          role="button" 
+          class="link-1"
+          @click="switchRule(rule150, $event)"
+        >Rule 150</a>
+        <a 
+          role="button" 
+          class="link-1"
+          @click="switchRule(rule183, $event)"
+        >Rule 183</a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -59,6 +59,7 @@ export default {
   data() {
     return {
       cellSize: 10,
+      rowWidth: 6000,
       timeCount: 0,
       timeInterval: 50,
       pattern: [],
@@ -66,7 +67,7 @@ export default {
   },
   computed: {
     cellsPerRow() {
-      return Math.ceil(window.innerWidth / this.cellSize)
+      return Math.ceil(this.rowWidth / this.cellSize)
     },
     rows() {
       return Math.ceil(this.heroHt / this.cellSize)
