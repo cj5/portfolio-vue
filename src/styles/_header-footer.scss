@@ -1,16 +1,20 @@
+// HEADER
 header {
   display: flex;
   align-items: center;
   .page-title {
     font-size: 20px;
   }
-  .left {
+  .goto-top {
     position: relative;
     right: $link-px;
   }
-  .right {
+  nav {
     position: relative;
     left: $link-px;
+    @media #{$mxw-nav} {
+      display: none;
+    }
   }
   li {
     margin-left: 20px;
@@ -18,18 +22,47 @@ header {
       margin-left: 0;
     }
   }
+  .navicon {
+    display: none;
+    @media #{$mxw-nav} {
+      position: relative;
+      display: block;
+      width: 26px;
+      height: 14px;
+      border-top: 2px solid $color-main;
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $color-main;
+      }
+      &:before {
+        top: calc(50% - 1px);
+        transform: translateY(-50%);
+      }
+      &:after {
+        bottom: 0;
+      }
+    }
+  }
 }
 .header {
   position: relative;
   height: $header-ht;
   background-color: #fff;
-  z-index: 999;
+  z-index: 9999;
   .goto-top {
     cursor: default;
     pointer-events: none;
     .icon {
       display: none;
     }
+  }
+  @media #{$mxw-sm} {
+    height: $sticky-header-ht;
   }
 }
 .sticky-header {
@@ -40,7 +73,7 @@ header {
   height: $sticky-header-ht;
   background-color: rgba($color-main, 0.92);
   transform: translateY(calc(-100%));
-  z-index: 999;
+  z-index: 99999;
   @include transition;
   &.show {
     transform: translateY(0);
@@ -65,8 +98,151 @@ header {
       margin: 1px 0 0 10px;
     } 
   }
+  .navicon {
+    @media #{$mxw-nav} {
+      border-color: #fff;
+      &:before,
+      &:after {
+        background-color: #fff;
+      }
+    }
+  }
+}
+.mobile-nav {
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: calc(100%);
+  background-color: rgba($color-main, 0.92);
+  z-index: 99999999;
+  @include transition;
+  &.show {
+    left: 0;
+  }
+  @media #{$mnw-md} {
+    display: none;
+  }
+  .mobile-nav-header {
+    position: relative;
+    z-index: 999999999;
+    > * {
+      height: $header-ht;
+      @media #{$mxw-sm} {
+        height: $sticky-header-ht;
+      }
+    }
+    .goto-top {
+      color: #fff;
+      font-size: 22px;
+    }
+    .close {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #fff;
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  a:hover {
+    background-color: transparent;
+  }
+  .nav-wrap {
+    width: 100%;
+    height: 100%;
+    > * {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @media #{$mxh} {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+    }
+  }
+  nav {
+    margin-top: 100px;
+    @media #{$mxw-sm} {
+      margin-top: 70px;
+    }
+    @media #{$mxh} {
+      margin-top: 30px;
+    }
+    ul {
+      flex-direction: column;
+      text-align: center;
+      @media #{$mxh} {
+        text-align-last: left;
+      }
+    }
+    li {
+      margin: 0 0 30px;
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+    a {
+      font-size: 50px;
+      color: #fff;
+      @media #{$mxw-sm} {
+        font-size: 40px;
+      }
+      @media #{$mxh} {
+        font-size: 35px;
+      }
+    }
+  }
+  .social {
+    margin: 130px 0 100px;
+    @media #{$mxw-sm} {
+      margin: 100px 0 80px;
+    }
+    @media #{$mxh} {
+      margin: 30px 0 0;
+      flex-direction: column;
+    }
+    li {
+      margin: 0 20px;
+      @media #{$mxh} {
+        margin: 0 0 15px;
+
+      }
+    }
+  }
+  .social-icon,
+  .icon.icon-mail {
+    width: 50px;
+    height: 50px;
+  }
+  .icon.icon-linkedin {
+    width: 45px;
+    height: 45px;
+  }
+  .icon.icon-github {
+    width: 41px;
+    height: 41px;
+  }
+  .icon {
+    fill: #fff;
+  }
 }
 
+// FOOTER
 .footer {
   background-color: $color-main;
   margin-top: 80px;
@@ -74,6 +250,9 @@ header {
   color: #fff;
   p {
     font-size: 14px;
+    @media #{$mxw-xxs} {
+      font-size: 12px;
+    }
   }
   .copy {
     position: relative;
@@ -84,9 +263,11 @@ header {
   .goto-top {
     position: relative;
     left: $link-px;
+    padding: 0;
     .icon {
       width: 25px;
       height: 25px;
+      padding: 8px 8px 6px;
     }
   }
 }

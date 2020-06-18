@@ -5,7 +5,9 @@ $header-ht: 90px;
 $sticky-header-ht: 50px;
 $link-px: 10px;
 $project-p: 20px;
+$project-p-sm: 14px;
 $project-trans-dur: 0.2s;
+$mob-project-offset: 54px;
 
 // FONTS
 $font-main: 'Space Mono', Arial, Helvetica, sans-serif;
@@ -19,9 +21,10 @@ $vpw-lg: 992px;
 $vpw-md: 768px;
 $vpw-sm: 576px;
 $vpw-xs: 400px;
+$vpw-xxs: 370px;
+$vpw-nav: $vpw-md;
 
-$vpw-nav: $vpw-lg;
-$mxw-nav: '(max-width: #{$vpw-nav - 1px})';
+$mx-vph: 640px;
 
 // MEDIA QUERIES
 $mxw-xl: '(max-width: #{$vpw-xl - 1px})';
@@ -29,9 +32,14 @@ $mxw-lg: '(max-width: #{$vpw-lg - 1px})';
 $mxw-md: '(max-width: #{$vpw-md - 1px})';
 $mxw-sm: '(max-width: #{$vpw-sm - 1px})';
 $mxw-xs: '(max-width: #{$vpw-xs - 1px})';
+$mxw-xxs: '(max-width: #{$vpw-xxs - 1px})';
+$mxw-nav: '(max-width: #{$vpw-nav - 1px})';
+
+$mxh: '(max-height: #{$mx-vph})';
 
 $mnw-xs: '(min-width: #{$vpw-xs})';
 $mnw-sm: '(min-width: #{$vpw-sm})';
 $mnw-md: '(min-width: #{$vpw-md})';
 $mnw-lg: '(min-width: #{$vpw-lg})';
 $mnw-xl: '(min-width: #{$vpw-xl})';
+$mnw-nav: '(min-width: #{$vpw-nav})';

@@ -92,7 +92,6 @@
 }
 .cell-row {
   opacity: 0;
-  transition: 0.2s all ease-in-out;
   &.show {
     opacity: 1;
   }
@@ -125,5 +124,8 @@
       width: 100%;
       background-color: $color-main;
     }
+  }
+  @media (max-width: 630px) {
+    display: none;
   }
 }
