@@ -1,6 +1,11 @@
 <template>
   <Section heading="Résumé" id="resume">
     <div class="mxw-wrap">
+      <ResumeSection heading="PDF Link">
+        <a href="docs/resume.pdf" class="link-1 pdf-link" target="_blank">
+          <svg class="icon icon-document-file-pdf"><use xlink:href="#icon-document-file-pdf"></use></svg>
+        </a>
+      </ResumeSection>
       <ResumeSection heading="Summary">
         <p>Web developer with six years experience building web applications. Mostly focused on the front-end with a strong background in JavaScript using ES6 and libraries like Vue and React. Also proficient with back-end and database technologies such as Node, PHP/Laravel and SQL. Strong problem solver with excellent communication and collaboration skills. Focused on writing clean, testable code in a highly productive manner.</p>
       </ResumeSection>
@@ -75,7 +80,7 @@ export default {
   name: 'Resume',
   components: {
     Section,
-    ResumeSection
+    ResumeSection,
   },
   data() {
     return {
