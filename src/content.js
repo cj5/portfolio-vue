@@ -4,9 +4,9 @@ const projects = [
     subtitle: 'Client project — Freelance',
     bgColor: '#1c1b1c',
     imgFile: 'bespoke.svg',
-    imgWidth: '300px',
+    imgWidth: '260px',
     imgFileBg: 'bespoke-bg.jpg',
-    filterColor: 'rgba(28,27,28,0.75)',
+    filterColor: 'rgba(28,27,28,0.85)',
     href: 'https://bespokedesignstudio.com',
     techList: [
       'Vue',
@@ -84,7 +84,7 @@ const experience = [
       {
         listHeading: 'Developed:',
         listItems: [
-          'Components and added CSS for an event bidding web app that reached over 1 million visitors.',
+          'Components and added CSS for an event bidding web app that reached over one million visitors.',
           'Components for forms, tabs, carousels and other common UI features that more fully met semantic and accessibilty requirements than frameworks like Bootstrap.',
           'Interactive world map that displayed hotel locations based on category. Included filter by category and clustering nearby locations to avoid display clutter.',
           'Site where dev team could easily upload individual email campaign data to display for client. Made optimizations over the life of the project including adding image lazy loading once multiple hundreds of email campaigns were live.',

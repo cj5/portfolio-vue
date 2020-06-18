@@ -78,7 +78,6 @@ const addSmoothScroll = (trigger, target) => {
 }
 
 const setTabIndex = (el, val) => {
-  console.log('setTabIndex()')
   if (el.length) {
     el.map(x => x.tabIndex = val)
   } else {

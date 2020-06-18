@@ -16,7 +16,13 @@
       </div>
     </div>
     <div class="automata-selector">
-      <a href="https://mathworld.wolfram.com/ElementaryCellularAutomaton.html" class="link-1" target="_blank">Cellular Automaton ></a>
+      <a 
+        href="https://mathworld.wolfram.com/ElementaryCellularAutomaton.html" 
+        class="link-1" 
+        target="_blank"
+      >
+        Cellular Automaton >
+      </a>
       <div ref="ruleSelectors">
         <a 
           role="button" 
@@ -61,7 +67,7 @@ export default {
       cellSize: 10,
       rowWidth: 6000,
       timeCount: 0,
-      timeInterval: 50,
+      timeInterval: 75,
       pattern: [],
     }
   },
