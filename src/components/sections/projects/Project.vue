@@ -1,15 +1,24 @@
 <template>
-  <a 
-    :href="data.href"
+  <div 
     class="project-wrap" 
     ref="projectWrap"
     :style="`background-color: ${data.bgColor};`"
-    target="_blank"
   >
+    <a class="link-1 project-link" :href="data.href" target="_blank">
+      <div class="mobile-link-text">
+        <p>Go to project</p>
+        <svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>
+      </div>
+    </a>
+    <div class="mobile-project-heading">
+      <h3 class="heading">{{ data.title }}</h3>
+      <h4 class="subheading italic">{{ data.subtitle }}</h4>
+    </div>
     <div class="project">
       <img 
         :src="this.img(data.imgFile)" 
         :alt="`${data.title} logo`"
+        class="img-logo"
         :style="`width: ${data.imgWidth};`"
         v-if="data.imgFile"
       >
@@ -33,11 +42,11 @@
         <svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>
         <p>Go to project</p>
       </div>
-      <div class="project-info" v-if="data.description">
+      <div class="project-description" v-if="data.description">
         <p>{{ data.description }}</p>
       </div>
     </div>
-  </a>
+  </div>
 </template>
 
 <script>
