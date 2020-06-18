@@ -90,6 +90,27 @@ export default {
 
     window.addEventListener('scroll', headerTransitions)
     // END HANDLE HEADER TRANSITIONS
+
+    // HANDLE MOBILE MENU
+    const openMobNav = nlToArr(
+      document.querySelectorAll('.navicon')
+    )
+    const closeMobNav = nlToArr(
+      document.querySelectorAll('.close-mobile-nav')
+    )
+    const mobNav = document.querySelector('.mobile-nav')
+
+    openMobNav.map(el => {
+      el.addEventListener('click', () => {
+        mobNav.classList.add('show')
+      })
+    })
+    closeMobNav.map(el => {
+      el.addEventListener('click', () => {
+        mobNav.classList.remove('show')
+      })
+    })
+    // END HANDLE MOBILE MENU
   }
 }
 </script>
