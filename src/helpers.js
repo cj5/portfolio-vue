@@ -3,7 +3,7 @@ const nlToArr = el => Array.prototype.slice.call(el)
 // https://pawelgrzybek.com/page-scroll-in-vanilla-javascript/
 function smoothScroll(
   destination, 
-  duration = 200, 
+  duration = 300, 
   callback
 ) {
   function easeInOutQuad(t) {

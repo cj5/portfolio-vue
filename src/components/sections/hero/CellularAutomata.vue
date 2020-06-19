@@ -187,9 +187,19 @@ export default {
     }
   },
   mounted() {
+    const rules = [
+      this.rule73,
+      this.rule89,
+      this.rule126,
+      this.rule150,
+      this.rule183,
+    ]
+
+    const randIndex = Math.round(Math.random() * (rules.length - 1))
+
     this.randomizeFirstRow()
-    this.automatize(this.rule150)
-    this.$refs.ruleSelectors.childNodes[3].classList.add('active')
+    this.automatize(rules[randIndex])
+    this.$refs.ruleSelectors.childNodes[randIndex].classList.add('active')
     this.showRows()
   }
 }
