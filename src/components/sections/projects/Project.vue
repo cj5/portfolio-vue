@@ -4,7 +4,7 @@
     ref="projectWrap"
     :style="`background-color: ${data.bgColor};`"
   >
-    <a class="link-1 project-link" :href="data.href" target="_blank">
+    <a class="link-1 project-link" :href="data.href" target="_blank" tabindex="0">
       <div class="mobile-link-text">
         <p>Go to project</p>
         <svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>

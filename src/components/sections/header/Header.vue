@@ -4,7 +4,7 @@
       <HeaderContent />
     </header>
     <header class="sticky-header">
-      <HeaderContent />
+      <HeaderContent toTopLink />
     </header>
     <div class="mobile-nav">
       <div class="mobile-nav-header">
@@ -34,6 +34,6 @@ export default {
     HeaderContent,
     HeaderNav,
     SocialLinks,
-  }
+  },
 }
 </script>

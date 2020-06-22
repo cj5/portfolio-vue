@@ -28,27 +28,47 @@
           role="button" 
           class="link-1"
           @click="switchRule(rule73, $event)"
-        >Rule 73</a>
+          @keyup.enter="switchRule(rule73, $event)"
+          tabindex="0"
+        >
+          Rule 73
+        </a>
         <a 
           role="button" 
           class="link-1"
           @click="switchRule(rule89, $event)"
-        >Rule 89</a>
+          @keyup.enter="switchRule(rule89, $event)"
+          tabindex="0"
+        >
+          Rule 89
+        </a>
         <a 
           role="button" 
           class="link-1"
           @click="switchRule(rule126, $event)"
-        >Rule 126</a>
+          @keyup.enter="switchRule(rule126, $event)"
+          tabindex="0"
+        >
+          Rule 126
+        </a>
         <a 
           role="button" 
           class="link-1"
           @click="switchRule(rule150, $event)"
-        >Rule 150</a>
+          @keyup.enter="switchRule(rule150, $event)"
+          tabindex="0"
+        >
+          Rule 150
+        </a>
         <a 
           role="button" 
           class="link-1"
           @click="switchRule(rule183, $event)"
-        >Rule 183</a>
+          @keyup.enter="switchRule(rule183, $event)"
+          tabindex="0"
+        >
+          Rule 183
+        </a>
       </div>
     </div>
   </div>

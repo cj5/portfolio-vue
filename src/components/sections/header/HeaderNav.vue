@@ -2,13 +2,13 @@
   <nav>
     <ul class="flex">
       <li>
-        <a :class="`link-1 goto-projects${compCustomClass}`">Projects</a>
+        <a :class="`link-1 goto-projects${compCustomClass}`" tabindex="0">Projects</a>
       </li>
       <li>
-        <a :class="`link-1 goto-resume${compCustomClass}`">Résumé</a>
+        <a :class="`link-1 goto-resume${compCustomClass}`" tabindex="0">Résumé</a>
       </li>
       <li>
-        <a :class="`link-1 goto-contact${compCustomClass}`">Contact</a>
+        <a :class="`link-1 goto-contact${compCustomClass}`" tabindex="0">Contact</a>
       </li>
     </ul>
   </nav>
