@@ -34,6 +34,11 @@ export default {
   mounted() {
     window.scrollTo(0, 0)
 
+    document.querySelector('#app').classList.add('fade-in')
+
+    const slideUpEls = nlToArr(document.querySelectorAll('.slide-up'))
+    slideUpEls.map(el => el.classList.add('slide'))
+
     // HANDLE SMOOTH SCROLL
     const gotoTop = nlToArr(
       document.querySelectorAll('.goto-top')
@@ -51,7 +56,7 @@ export default {
       document.querySelectorAll('.goto-contact')
     )
     const contact = document.querySelector('#contact')
-    
+
     addSmoothScroll(gotoTop, top)
     addSmoothScroll(gotoProjects, projects)
     addSmoothScroll(gotoResume, resume)

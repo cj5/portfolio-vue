@@ -1,5 +1,5 @@
 <template>
-  <ul class="social flex">
+  <ul :class="`social flex${compCustomClass}`">
     <li>
       <a class="social-icon link-1" href="mailto:chris@chrisstack.co">
         <svg class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg>
@@ -20,6 +20,16 @@
 
 <script>
 export default {
-  name: 'SocialLinks'
+  name: 'SocialLinks',
+  props: {
+    customClass: String
+  },
+  computed: {
+    compCustomClass() {
+      let val
+      this.customClass ? val = ` ${this.customClass}` : val = ''
+      return val
+    }
+  }
 }
 </script>
